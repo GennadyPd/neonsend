@@ -1,0 +1,22 @@
+﻿[package]
+name = "neonsend"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.37"
+rfd = "0.14"
+qrcode = { version = "0.14", default-features = false }
+axum = "0.7"
+tokio = { version = "1", features = ["rt-multi-thread", "net", "fs", "io-util", "macros", "time", "sync"] }
+futures-util = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+if-addrs = "0.15.0"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true

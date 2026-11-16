@@ -1,0 +1,7 @@
+/target/
+*.bak
+crash.log
+devices.json
+
+/.opencode/
+/dist/
